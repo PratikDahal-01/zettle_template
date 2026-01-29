@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: 9fimi-27hxs
+created: 2025-03-20T13:14:20+05:30

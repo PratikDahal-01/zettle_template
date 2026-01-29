@@ -1,0 +1,121 @@
+/*------------------------------------------------------------------------------
+                     Weekly Note Theme - Academic Paper Style
+------------------------------------------------------------------------------*/
+
+.weekly {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --header-color: #222222;
+    --subheader-color: #444444;
+    --highlight-color: #0056b3;
+    --border-color: #cccccc;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weekly h1,
+.weekly .HyperMD-header.HyperMD-header-1 {
+    color: var(--header-color);
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.weekly h2,
+.weekly .HyperMD-header.HyperMD-header-2 {
+    color: var(--subheader-color);
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.weekly h3,
+.weekly .HyperMD-header.HyperMD-header-3 {
+    color: var(--header-color);
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.weekly p {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.weekly ul,
+.weekly ol {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+.weekly li {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.weekly a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.weekly a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+.weekly blockquote {
+    color: var(--subheader-color);
+    font-style: italic;
+    border-left: 4px solid var(--border-color);
+    padding-left: 16px;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.weekly hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 30px 0;
+}
+
+.weekly img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.weekly code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.weekly :is(h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}

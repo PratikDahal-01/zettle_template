@@ -1,0 +1,29 @@
+{
+  "accentColor": "#ff6600",
+  "cssTheme": "Vanilla AMOLED Color",
+  "textFontFamily": "Cartograph CF Italic,JetBrains Mono",
+  "interfaceFontFamily": "JetBrains Mono,Abril Fatface",
+  "enabledCssSnippets": [
+    "Colored Sidebar Items",
+    "CyanVoxel's General Tweaks",
+    "Daily Note Themes",
+    "Notebook Backgrounds",
+    "Minecraft",
+    "Japanese Font Support",
+    "Runescape",
+    "Weekly Note Themes",
+    "Centered H1",
+    "tableStyles",
+    "dashboard",
+    "WWW_Icon_Next_to_external_links",
+    "cards",
+    "Background for Kanban",
+    "MCL Multi Column",
+    "Blockquotes Hover Effect",
+    "Properties on hover",
+    "media-grid-snippet"
+  ],
+  "nativeMenus": false,
+  "showViewHeader": true,
+  "showRibbon": true
+}

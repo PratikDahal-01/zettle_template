@@ -1,0 +1,19 @@
+{
+  "workLen": 120,
+  "breakLen": 10,
+  "autostart": true,
+  "useStatusBarTimer": true,
+  "notificationSound": true,
+  "customSound": "03 - Resources/jai-shree-ram-notification-ringtone-tone-60275.mp3",
+  "showTaskProgress": true,
+  "enableTaskTracking": false,
+  "logFile": "FILE",
+  "logFocused": false,
+  "logPath": "06 - Calendar/Pomodoro Logs",
+  "logLevel": "ALL",
+  "logTemplate": "",
+  "logFormat": "VERBOSE",
+  "useSystemNotification": false,
+  "taskFormat": "TASKS",
+  "lowFps": true
+}

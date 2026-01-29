@@ -1,0 +1,106 @@
+---
+date: <% moment(tp.file.title,"YYYY-MM-DD").format("YYYY-MM-DD") %>
+aliases:
+tags:
+  - Daily
+cssclasses:
+  - daily
+  <% "- " + tp.date.now("dddd", 0, tp.file.title, "YYYY-MM-DD") %>
+---
+# DAILY NOTE
+## <% moment(tp.file.title,"YYYY-MM-DD").format("YYYY-MM-DD") %>
+---
+
+### Journal
+#### <% tp.date.now("HH:mm") %>
+
+```calendar-nav
+```
+
+---
+> [!multi-column]
+>
+>>[!todo]+ Due Today
+>>```tasks
+>> not done
+>> due <%tp.file.title%>
+>> sort by priority
+>> hide due date
+>> ```
+>
+>> [!danger]+ Overdue
+>> ```tasks
+>> not done
+>> due before <% tp.file.title%>
+>> sort by priority
+>> hide due date
+>> ```
+>
+>> [!success]+ Completed
+>> ```tasks
+>> done <% tp.file.title%>
+>> hide done date
+>> ```
+
+---
+#### <%tp.file.title%> png
+(insert upto 3 pic)
+
+---
+### Morning Pages
+>[!journal]- On this Day IMAGE
+>```dataviewjs
+const current = dv.date(dv.current().file.name); // parse current note date from filename
+const pages = dv.pages('"06 - Calendar/01 - Daily"')
+  // same month + day
+  .where(p => dv.date(p.file.name).toFormat("MM-dd") === current.toFormat("MM-dd"))
+  // but strictly earlier
+  .where(p => dv.date(p.file.name) < current);
+for (const page of pages) {
+  dv.span(dv.fileLink(page.file.path + "#" + page.file.name + " png", true));
+  dv.el("div", ""); // spacing between embeds
+}
+>```
+
+>[!journal]- On this Day
+>```dataview
+LIST FROM "06 - Calendar/01 - Daily" WHERE dateformat(file.day, "MM-dd") = dateformat(this.file.day, "MM-dd") AND file.day < this.file.day
+>```
+
+>[!calendar]+ Notes Created Today
+>```dataview
+TABLE created,updated as modified, tags, summary
+FROM "" AND !"Journal" AND !"Templates"
+WHERE icontains(dateformat(file.ctime,"YYYY-MM-DD"),dateformat(this.file.day,"YYYY-MM-DD"))
+>```
+
+
+**Daily Dump**
+
+---
+### Log Pages
+Subject 1 ->               Subject 2 -> 
+- [ ] 6:00 AM - Wake-UP & Mediate 
+- [ ] 7:00 AM - Start Studying Subject 1
+- [ ] 9:00 AM - Small time to think and reflect
+- [ ] 9:30 AM - Revise the previous topics (very briefly)
+- [ ] 10:00 AM - Study DM and have food in between (not in my room)
+- [ ] 12:00 PM - Reflect some more Read a book (the stoic book)
+- [ ] 1:00 OM - Study Subject 2 
+- [ ] 3:00 PM - Hit the Gym
+- [ ] 5:00 PM - Start Studying subject 2 again 
+- [ ] 8:00 PM - Close Study and start reflecting on the stuff you thought and write down everything
+- [ ] 11:00 PM - Sleep
+---
+### Learning Logs
+
+
+---
+### Day’s Review
+
+---
+
+### Evening Reviews
+- [/] Set the Tasks for tomorrow that the god in me will have to do
+---
+### Distractions

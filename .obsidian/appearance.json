@@ -1,0 +1,28 @@
+{
+  "cssTheme": "Vanilla AMOLED Color",
+  "enabledCssSnippets": [
+    "Background for Kanban",
+    "Beautiful Blockquote",
+    "Blockquotes Hover Effect",
+    "Canvas Cards with Images",
+    "daily",
+    "Daily Note Themes",
+    "dashboard",
+    "Enlarge Image on Hover",
+    "Folder & File Icons",
+    "media-grid-snippet",
+    "Meta-Grid CSS",
+    "Minecraft",
+    "Minimal Colored Folders",
+    "Minimal Theme cards",
+    "Notebook Backgrounds",
+    "Properties on hover",
+    "cards",
+    "Centered H1",
+    "Clean Embeds",
+    "Colored Sidebar Items"
+  ],
+  "accentColor": "#61ffca",
+  "textFontFamily": "JetBrains Mono",
+  "interfaceFontFamily": "JetBrains Mono"
+}

@@ -1,0 +1,30 @@
+{
+  "recentFiles": [
+    {
+      "basename": "Calendar View",
+      "path": "99 - Meta/Calendar/Calendar View.md"
+    },
+    {
+      "basename": "(TEMPLATE) Directness",
+      "path": "99 - Meta/00 - Templates/(TEMPLATE) Directness.md"
+    },
+    {
+      "basename": "(TEMPLATE) Daily",
+      "path": "99 - Meta/00 - Templates/(TEMPLATE) Daily.md"
+    },
+    {
+      "basename": "(TEMPLATE) A New Note",
+      "path": "99 - Meta/00 - Templates/(TEMPLATE) A New Note.md"
+    },
+    {
+      "basename": "(TEMPLATE) A GATE Note",
+      "path": "99 - Meta/00 - Templates/(TEMPLATE) A GATE Note.md"
+    }
+  ],
+  "omittedPaths": [],
+  "omittedTags": [],
+  "updateOn": "file-open",
+  "omitBookmarks": false,
+  "maxLength": null,
+  "openType": "tab"
+}

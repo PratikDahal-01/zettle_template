@@ -1,0 +1,54 @@
+{
+  "logoType": "default",
+  "logo": {
+    "lucideIcon": "",
+    "imagePath": "",
+    "imageLink": ""
+  },
+  "logoScale": 1.2,
+  "iconColorType": "default",
+  "wordmark": "Obsidian",
+  "customFont": "interfaceFont",
+  "fontSize": "4em",
+  "fontColorType": "default",
+  "fontWeight": 600,
+  "maxResults": 5,
+  "showbookmarkedFiles": true,
+  "showRecentFiles": false,
+  "maxRecentFiles": 5,
+  "storeRecentFile": true,
+  "showPath": true,
+  "selectionHighlight": "default",
+  "showShortcuts": true,
+  "markdownOnly": false,
+  "unresolvedLinks": false,
+  "recentFilesStore": [
+    {
+      "filepath": "04 - Permanent/GATE/CSE/06 - DSA/Big O.md",
+      "timestamp": 1742474719440
+    },
+    {
+      "filepath": "04 - Permanent/GATE/CSE/06 - DSA/00 - Map Of Content.md",
+      "timestamp": 1742474713014
+    },
+    {
+      "filepath": "04 - Permanent/GATE/CSE/06 - DSA/Asymptotic Analysis.md",
+      "timestamp": 1742474243604
+    },
+    {
+      "filepath": "04 - Permanent/GATE/CSE/06 - DSA/Analysis Of Algorithm/Assumption & Method To Anlayze before Implementation.md",
+      "timestamp": 1742474173485
+    },
+    {
+      "filepath": "04 - Permanent/GATE/CSE/06 - DSA/Analysis Of Algorithm/Apriori.md",
+      "timestamp": 1742473530729
+    }
+  ],
+  "bookmarkedFileStore": [],
+  "searchDelay": 0,
+  "replaceNewTabs": false,
+  "newTabOnStart": false,
+  "closePreviousSessionTabs": false,
+  "omnisearch": false,
+  "showOmnisearchExcerpt": true
+}

@@ -1,0 +1,640 @@
+/*
+ * Required by Obsidian to load the plugin
+ */
+
+.workspace-leaf-content[data-type="notes-explorer"] .view-content {
+    overflow: unset;
+    padding-block-start: 0 !important;
+    padding-right: 5px;
+    padding-block-end: 4em;
+}
+
+/* View.ts  */
+
+.notes-explorer-statuBarSpanEl {
+    padding-inline: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.notes-explorer-status-bar-button {
+    background-color: var(--background-modifier-box-shadow);
+    padding-inline: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.notes-explorer-status-bar-button:hover {
+    background-color: var(--background-secondary);
+}
+
+/* Root.svelte */
+.action-bar-parent {
+    z-index: 10;
+    /* border-radius: 2em; */
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* padding-inline: 1em; */
+
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    pointer-events: auto;
+}
+
+.action-bar-parent-hide {
+    opacity: 0;
+    transform: translateY(0);
+    pointer-events: none;
+    /* Optional: to prevent interaction when hidden */
+}
+
+.action-bar {
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-inline: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-primary);
+    box-shadow: 0px 10px 15px -10px var(--background-modifier-success);
+    backdrop-filter: blur(5px);
+
+    @media screen and (min-width: 700px) {
+        flex-wrap: nowrap;
+    }
+}
+
+.action-bar_folder {
+    display: flex;
+    gap: 0.5rem;
+    width: fit-content;
+    background: var(--background-modifier-border);
+    padding-inline-start: 0.5rem;
+    border-radius: 4px;
+    border: 2px solid var(--code-tag);
+    color: var(--code-keyword);
+    flex-direction: row;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-inline: 5px;
+}
+
+.action-bar_folder_closeButton {
+    color: white;
+    background: var(--canvas-background);
+    align-content: center;
+    border: 0 !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+}
+
+/* .action-bar .action-bar__tags {
+    flex-grow: 1;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media screen and (min-width: 700px) {
+        overflow: hidden;
+
+        & .action-bar__tags__list {
+            transition: box-shadow 0.3s;
+        }
+
+        &:hover .action-bar__tags__list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            white-space: normal;
+            height: 100%;
+            z-index: var(--layer-popover);
+            background-color: var(--background-primary);
+            padding-bottom: var(--size-4-2);
+            box-shadow: 0 0 var(--size-2-3) var(--size-2-3) var(--background-primary-alt);
+
+            & button.action-bar__tag {
+                margin-bottom: var(--size-2-2);
+            }
+        }
+    }
+} */
+
+.action-bar .action-bar__tags {
+    flex-grow: 1;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+    overflow: auto;
+
+    @media screen and (min-width: 700px) {
+        overflow: hidden;
+        max-width: 65vw;
+    }
+}
+
+.action-bar__tags__list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-block: 4px;
+}
+
+.action-bar button.action-bar__tag {
+    font-size: var(--tag-size);
+    color: var(--tag-color);
+    text-decoration: var(--tag-decoration);
+    background-color: var(--tag-background);
+    border: var(--tag-border-width) solid var(--tag-border-color);
+    padding: var(--tag-padding-y) var(--tag-padding-x);
+    border-radius: var(--tag-radius);
+    font-weight: var(--tag-weight);
+    margin-right: var(--size-2-2);
+
+    &:hover {
+        color: var(--tag-color-hover);
+        text-decoration: var(--tag-decoration-hover);
+        background-color: var(--tag-background-hover);
+        border-color: var(--tag-border-color-hover);
+    }
+}
+
+.action-bar .action-bar__search {
+    flex-grow: 1;
+
+    @media screen and (min-width: 700px) {
+        min-width: 300px;
+        max-width: 300px;
+        box-shadow: calc(0px - var(--size-4-5)) 0 var(--size-2-3) var(--size-2-3) var(--background-primary);
+    }
+}
+
+.cards-container {
+    position: relative;
+    container-type: inline-size;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 3em; */
+    margin-bottom: 2em;
+    height: inherit !important;
+}
+
+.cards-container :global(*) {
+    --card-padding: var(--size-4-3);
+    --card-gutter: var(--size-4-5);
+}
+
+.search-component {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.refresh-button {
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.refresh-button:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+.page-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+    position: sticky;
+    z-index: var(--layer-status-bar);
+    bottom: 2.4em;
+    right: 1em;
+    padding-inline: 1em;
+    max-width: 95vw;
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.page-bar-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    /* background-color: var(--background-modifier-success); */
+    border-radius: 2em;
+    padding-block: 10px;
+    box-shadow: 0px 0px 15px -4px var(--background-modifier-success);
+    backdrop-filter: blur(10px);
+}
+
+.page-bar button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: var(--background-secondary);
+}
+
+.page-bar button.active {
+    font-weight: bold;
+    background-color: var(--color-accent);
+}
+
+/* Card.svelte */
+
+.card {
+    position: absolute;
+    background-color: var(--background-primary-alt);
+    border: 1px solid var(--background-modifier-border);
+    word-wrap: break-word;
+    overflow-y: hidden;
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transform: translate(0, 100vh);
+    display: flex;
+    flex-direction: column;
+    /* Set max height for cards */
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
+        -1px 4px 10px 0 rgba(0, 0, 0, 0.19);
+    margin: calc(-1 * var(--card-padding));
+    margin-top: 1px;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-4-1);
+    border-radius: 7px;
+    font-size: 0.8rem;
+}
+
+.top-bar {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--color-base-70);
+    padding: 0.2rem;
+    border-bottom: 1px solid var(--background-modifier-border);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 7%;
+}
+
+.top-bar-fileName {
+    width: 100%;
+    text-wrap: pretty;
+}
+
+.card.skip-transition {
+    transition: none;
+}
+
+.card :global(p),
+.card :global(ul) {
+    margin: 0.3rem 0;
+}
+
+.card :global(h1),
+.card :global(h2),
+.card :global(h3) {
+    margin: 0 0 0.3rem;
+}
+
+.card :global(ul) {
+    padding-left: var(--size-4-5);
+}
+
+.card :global(p:has(> span.image-embed):not(:has(br))) {
+    margin: 0;
+}
+
+.card :global(span.image-embed) {
+    margin: 0 calc(-1 * var(--card-padding));
+    width: calc(100% + 2 * var(--card-padding));
+}
+
+/* Images embeds alone in a paragraph */
+.card :global(p:has(> span.image-embed):not(:has(br)) span.image-embed) {
+    display: block;
+
+    & img {
+        display: block;
+    }
+}
+
+/* Image embeds followed by line break in same paragraph */
+.card :global(p:has(> span.image-embed):has(br) span.image-embed) {
+    display: inline-block;
+}
+
+/** Embed notes */
+.card :global(p:has(> span.markdown-embed)),
+.card :global(.block-language-dataview) {
+    overflow: hidden;
+    max-height: 5rem;
+    position: relative;
+}
+
+.card :global(p:has(> span.markdown-embed) > .embed-shadow),
+.card :global(.block-language-dataview > .embed-shadow) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 -2rem 1rem -1rem var(--background-primary-alt);
+}
+
+.card:hover {
+    border-color: var(--background-modifier-border-hover);
+}
+
+.card h3 {
+    word-wrap: break-word;
+}
+
+.card-content {
+    /* flex-grow: 1; */
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow-x: clip;
+}
+
+.card-content blockquote {
+    margin-inline: 8px;
+}
+
+.card-footer-parent {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.card-footer-parent-active {
+    background-color: var(--background-primary);
+    box-shadow: 0 8px 32px 0 var(--caret-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.card:hover .card-footer-parent {
+    background-color: var(--background-primary);
+    box-shadow: 0 8px 32px 0 var(--caret-color);
+    /* backdrop-filter: blur(5px); */
+}
+
+.card-footer {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-4-1);
+    color: var(--ascent-color);
+}
+
+.footer-metadata {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    align-items: center;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    max-width: 75%;
+}
+
+.card-footer-text {
+    font-size: var(--nav-item-size);
+    font-weight: 500;
+    text-wrap: pretty;
+}
+
+.card .clickable-icon.is-active {
+    color: var(--tab-text-color-focused-active);
+    background-color: var(--background-modifier-hover);
+    cursor: pointer;
+}
+
+.card-footer .clickable-icon {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .clickable-icon {
+    opacity: 1;
+    transform: scale(1);
+    color: var(--text-color);
+}
+
+.card-footer button.clickable-icon {
+    cursor: pointer;
+}
+
+.card-content-empty {
+    padding-block: 2rem;
+    text-align: center;
+}
+
+
+/* /src/settings.ts */
+
+.notes-explorer-tag-container .notes-explorer-tag-container-tag-row {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-block: 2px;
+}
+
+.notes-explorer-tag-container-tag-row-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+}
+
+.notes-explorer-tag-container .setting-item-control {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-block: 5px;
+}
+
+.notes-explorer-sortable-fallback {
+    cursor: grabbing;
+    box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.notes-explorer-sortable-grab {
+    cursor: grabbing !important;
+}
+
+.notes-explorer-sortable-ghost {
+    opacity: 0.4;
+    cursor: grabbing;
+}
+
+.notes-explorer-sortable-chosen {
+    cursor: grabbing;
+    padding: 0 0 0 18px;
+    background-color: var(--background-primary);
+}
+
+.notes-explorer-sortable-drag {
+    cursor: grabbing;
+    box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.notes-explorer-exclude-folders-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.notes-explorer-exclude-folders-list-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background-color: var(--background-secondary);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.notes-explorer-tag-container-tag-row-drag {
+    cursor: grab;
+}
+
+.notes-explorer-exclude-folders-list-item:hover {
+    background-color: var(--interactive-accent);
+    transform: scale(1.02);
+    border: 1px solid var(--graph-node);
+}
+
+.notes-explorer-exclude-folders-list-folderIcon {
+    width: 25px;
+    height: 25px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007aff;
+}
+
+.notes-explorer-exclude-folders-list-folderName {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.notes-explorer-exclude-folders-list-button {
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.notes-explorer-exclude-folders-list-button:hover {
+    background-color: #d9363e;
+}
+
+.settingTabFooterSection {
+    align-items: center;
+    text-align: center;
+}
+
+.settingTabFooterDonationsSec {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
+    max-height: 60px;
+}
+
+/* DeleteTaskConfirmationModal */
+
+.deleteConfirmationModalHome {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.7rem;
+}
+
+.deleteConfirmationModalHome-button-container {
+    display: flex;
+    gap: 1em;
+    margin-top: 1.5rem;
+}
+
+.deleteTaskConfirmBtn {
+    padding-block: 4px;
+    padding-inline: 25px;
+    cursor: pointer;
+}
+
+.deleteTaskCancelmBtn {
+    padding-block: 4px;
+    padding-inline: 25px;
+    cursor: pointer;
+}
+
+.deleteTaskConfirmBtn:hover {
+    background-color: red !important;
+    /* Change background to green on hover */
+}
+
+.deleteTaskCancelmBtn:hover {
+    background-color: green !important;
+    /* Change background to red on hover */
+}
+
+/* Style fixes for Obsidian generated elements */
+
+.card-content .task-list-item {
+    margin-inline-start: 1.8em;
+}
+
+.card-content span {
+    display: flex;
+    justify-content: center;
+}
+
+.card-content span.token {
+    display: flex;
+    justify-content: left;
+}
+
+.card-content ol {
+    padding-inline-start: 14px;
+}
