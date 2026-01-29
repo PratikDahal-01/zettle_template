@@ -209,5 +209,15 @@
       ],
       "key": "D"
     }
+  ],
+  "unitade:unitade-toggle-safe-mode": [],
+  "quickadd:choice:fa78764e-b53a-4f70-9deb-140648bf6690": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
   ]
 }

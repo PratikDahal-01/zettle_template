@@ -82,7 +82,8 @@
       "folder": {
         "enabled": true,
         "folders": [
-          "05 - Fleeting/Cards"
+          "02 - Inbox",
+          "04 - Permanent"
         ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false
@@ -95,7 +96,8 @@
         "focus": true
       },
       "openFile": true,
-      "openFileInMode": "source"
+      "openFileInMode": "source",
+      "fileExistsMode": "Nothing"
     },
     {
       "id": "224f6491-5016-40c5-a6b5-0bac1a55e488",
@@ -165,6 +167,13 @@
       "type": "Macro",
       "command": true,
       "macroId": "e372c893-de3a-482e-b2b4-3200a77e9d11"
+    },
+    {
+      "id": "fa78764e-b53a-4f70-9deb-140648bf6690",
+      "name": "Move Note to Sleeping",
+      "type": "Macro",
+      "command": true,
+      "macroId": "d182f708-cec0-496d-b79f-92aad3bdeace"
     }
   ],
   "macros": [
@@ -319,15 +328,7 @@
     {
       "name": "Move Zettel to Private",
       "id": "fbbceb07-8ccb-4cad-b0a4-7374f77944d9",
-      "commands": [
-        {
-          "name": "move-zettel-to-private",
-          "type": "UserScript",
-          "id": "27cd9ce7-9887-4051-a908-3e99c73943a5",
-          "path": "99 - Meta/_scripts/move-zettel-to-private.js",
-          "settings": {}
-        }
-      ],
+      "commands": [],
       "runOnStartup": false
     },
     {
@@ -339,6 +340,20 @@
           "type": "UserScript",
           "id": "ba9dda30-dd64-4c06-9d46-937719f74f61",
           "path": "99 - Meta/_scripts/logDistractionToDaily.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Move Note to Sleeping",
+      "id": "d182f708-cec0-496d-b79f-92aad3bdeace",
+      "commands": [
+        {
+          "name": "move-inbox-to-sleeping",
+          "type": "UserScript",
+          "id": "09673190-1915-4ac3-9dc1-c93c72059e70",
+          "path": "99 - Meta/_scripts/move-inbox-to-sleeping.js",
           "settings": {}
         }
       ],

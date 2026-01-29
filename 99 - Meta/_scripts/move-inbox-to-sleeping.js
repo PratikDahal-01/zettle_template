@@ -1,5 +1,5 @@
 module.exports = async function moveZettel(params) {
-    const PRIVATE_FOLDER = "Private/";
+    const SLEEPING_FOLDER = "03 - Sleeping/";
     const Notice = params.obsidian.Notice;
 
 
@@ -12,8 +12,8 @@ module.exports = async function moveZettel(params) {
 
 
 
-    if (activeFileFolder === PRIVATE_FOLDER) {
-        new Notice("File is already in private folder");
+    if (activeFileFolder === SLEEPING_FOLDER) {
+        new Notice("File is already in sleeping folder");
         return;
     }
 
@@ -33,6 +33,6 @@ module.exports = async function moveZettel(params) {
     // move file to private folder
     await params.app.vault.rename(
         activeFile,
-        `${PRIVATE_FOLDER}${activeFileName}.${activeFileExt}`
+        `${SLEEPING_FOLDER}${activeFileName}.${activeFileExt}`
     );
 }

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiHardHat",
+      "LiBed",
       "LiMail",
       "BoBxDotsHorizontalRounded",
-      "LiAlertTriangle",
-      "LiAArrowUp",
-      "LiCalendar"
+      "LiAlertTriangle"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [
@@ -98,5 +98,7 @@
   "99 - Images": "BoBxsCameraPlus",
   "06 - Calendar": "LiCalendar",
   "88 - Zotero": "BoBxDotsHorizontalRounded",
-  "02 - Inbox": "LiMail"
+  "02 - Inbox": "LiMail",
+  "03 - Sleeping": "LiBed",
+  "04 - Permanent": "LiHardHat"
 }
