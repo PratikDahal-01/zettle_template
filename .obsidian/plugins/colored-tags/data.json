@@ -145,7 +145,11 @@
     "React-Native": 75,
     "LLM-from-Scratch": 76,
     "Open-Telemetry": 77,
-    "Maths-for-Machine-Learning": 78
+    "Maths-for-Machine-Learning": 78,
+    "comp": 79,
+    "comp/problem": 1,
+    "philosophy": 80,
+    "philosophy/mistake": 1
   },
   "_version": 3
 }

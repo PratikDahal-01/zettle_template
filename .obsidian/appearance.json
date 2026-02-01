@@ -24,5 +24,6 @@
   ],
   "accentColor": "#61ffca",
   "textFontFamily": "JetBrains Mono",
-  "interfaceFontFamily": "JetBrains Mono"
+  "interfaceFontFamily": "JetBrains Mono",
+  "showRibbon": true
 }

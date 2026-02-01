@@ -5,28 +5,200 @@
       "path": "README.md"
     },
     {
-      "basename": "Habit Tracker",
-      "path": "00 - Maps of Content/Habit Tracker.md"
+      "basename": "Structure Notes",
+      "path": "02 - Inbox/Structure Notes.md"
     },
     {
-      "basename": "Calendar View",
-      "path": "99 - Meta/Calendar/Calendar View.md"
+      "basename": "Bob Doto A SYSTEM FOR WRITING",
+      "path": "05 - Resources/Bob Doto A SYSTEM FOR WRITING.md"
     },
     {
-      "basename": "(TEMPLATE) Directness",
-      "path": "99 - Meta/00 - Templates/(TEMPLATE) Directness.md"
+      "basename": "Hub Notes",
+      "path": "02 - Inbox/Hub Notes.md"
     },
     {
-      "basename": "(TEMPLATE) Daily",
-      "path": "99 - Meta/00 - Templates/(TEMPLATE) Daily.md"
+      "basename": "Lattice of Mental Model",
+      "path": "02 - Inbox/Lattice of Mental Model.md"
+    },
+    {
+      "basename": "Permanent Notes",
+      "path": "02 - Inbox/Permanent Notes.md"
+    },
+    {
+      "basename": "Reference",
+      "path": "02 - Inbox/Reference.md"
+    },
+    {
+      "basename": "Sonke Ahrens - How to Take Smart Note",
+      "path": "05 - Resources/Sonke Ahrens - How to Take Smart Note.md"
+    },
+    {
+      "basename": "Multitasking",
+      "path": "04 - Permanent/Multitasking.md"
+    },
+    {
+      "basename": "Does Multitasking, reduce the ability to Multitask",
+      "path": "02 - Inbox/Does Multitasking, reduce the ability to Multitask.md"
+    },
+    {
+      "basename": "BOOKS",
+      "path": "00 - Maps of Content/BOOKS.md"
+    },
+    {
+      "basename": "New Text Document",
+      "path": "04 - Permanent/New Text Document.txt"
+    },
+    {
+      "basename": "Residual of Attention",
+      "path": "02 - Inbox/Residual of Attention.md"
+    },
+    {
+      "basename": "Oliver Burkeman - The antidote Happiness for people who can’t stand positive thinking",
+      "path": "05 - Resources/Oliver Burkeman - The antidote Happiness for people who can’t stand positive thinking.md"
+    },
+    {
+      "basename": "Abstraction",
+      "path": "02 - Inbox/Abstraction.md"
+    },
+    {
+      "basename": "Play and Fiddle with ideas",
+      "path": "02 - Inbox/Play and Fiddle with ideas.md"
+    },
+    {
+      "basename": "There is no one eureka moment",
+      "path": "02 - Inbox/There is no one eureka moment.md"
+    },
+    {
+      "basename": "202401211512 Notebook CSS Classes",
+      "path": "99 - Meta/Preloaded Classes/202401211512 Notebook CSS Classes.md"
+    },
+    {
+      "basename": "economics",
+      "path": "00 - Maps of Content/economics.md"
+    },
+    {
+      "basename": "Charlie Munger",
+      "path": "02 - Inbox/Charlie Munger.md"
+    },
+    {
+      "basename": "Warren Buffet",
+      "path": "02 - Inbox/Warren Buffet.md"
+    },
+    {
+      "basename": "New notes have the essence of previous notes but with differences",
+      "path": "02 - Inbox/New notes have the essence of previous notes but with differences.md"
+    },
+    {
+      "basename": "Visualize topics",
+      "path": "02 - Inbox/Visualize topics.md"
     },
     {
       "basename": "(TEMPLATE) A New Note",
       "path": "99 - Meta/00 - Templates/(TEMPLATE) A New Note.md"
     },
     {
-      "basename": "(TEMPLATE) A GATE Note",
-      "path": "99 - Meta/00 - Templates/(TEMPLATE) A GATE Note.md"
+      "basename": "Capacity of the Brain",
+      "path": "02 - Inbox/Capacity of the Brain.md"
+    },
+    {
+      "basename": "Retrieval of brain",
+      "path": "02 - Inbox/Retrieval of brain.md"
+    },
+    {
+      "basename": "Reading beyond the lines",
+      "path": "02 - Inbox/Reading beyond the lines.md"
+    },
+    {
+      "basename": "conformation bias",
+      "path": "02 - Inbox/conformation bias.md"
+    },
+    {
+      "basename": "Paradox of Unfinished Task",
+      "path": "02 - Inbox/Paradox of Unfinished Task.md"
+    },
+    {
+      "basename": "Action is God",
+      "path": "02 - Inbox/Action is God.md"
+    },
+    {
+      "basename": "Mere-Exposure Effect",
+      "path": "02 - Inbox/Mere-Exposure Effect.md"
+    },
+    {
+      "basename": "Fleeting Notes",
+      "path": "02 - Inbox/Fleeting Notes.md"
+    },
+    {
+      "basename": "working with feedbacks",
+      "path": "02 - Inbox/working with feedbacks.md"
+    },
+    {
+      "basename": "Growth Mindset",
+      "path": "02 - Inbox/Growth Mindset.md"
+    },
+    {
+      "basename": "scientist",
+      "path": "00 - Maps of Content/scientist.md"
+    },
+    {
+      "basename": "psychology",
+      "path": "00 - Maps of Content/psychology.md"
+    },
+    {
+      "basename": "productivity",
+      "path": "00 - Maps of Content/productivity.md"
+    },
+    {
+      "basename": "pkm",
+      "path": "00 - Maps of Content/pkm.md"
+    },
+    {
+      "basename": "person",
+      "path": "00 - Maps of Content/person.md"
+    },
+    {
+      "basename": "Finding our purpose",
+      "path": "02 - Inbox/Finding our purpose.md"
+    },
+    {
+      "basename": "New Text Document",
+      "path": "06 - Calendar/New Text Document.txt"
+    },
+    {
+      "basename": "New Text Document",
+      "path": "Clippings/New Text Document.txt"
+    },
+    {
+      "basename": "Luhmann types of note",
+      "path": "02 - Inbox/Luhmann types of note.md"
+    },
+    {
+      "basename": "Project Notes",
+      "path": "02 - Inbox/Project Notes.md"
+    },
+    {
+      "basename": "Sleeping",
+      "path": "02 - Inbox/Sleeping.md"
+    },
+    {
+      "basename": "Inbox",
+      "path": "02 - Inbox/Inbox.md"
+    },
+    {
+      "basename": "pkm",
+      "path": "99 - Meta/Bases/pkm.base"
+    },
+    {
+      "basename": "Luhmann",
+      "path": "02 - Inbox/Luhmann.md"
+    },
+    {
+      "basename": "scientist",
+      "path": "99 - Meta/Bases/scientist.base"
+    },
+    {
+      "basename": "person",
+      "path": "99 - Meta/Bases/person.base"
     }
   ],
   "omittedPaths": [],

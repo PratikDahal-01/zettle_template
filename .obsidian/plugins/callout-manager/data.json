@@ -1,7 +1,15 @@
 {
   "callouts": {
     "custom": [],
-    "settings": {}
+    "settings": {
+      "tip": [
+        {
+          "changes": {
+            "icon": "lucide-notebook-pen"
+          }
+        }
+      ]
+    }
   },
   "calloutDetection": {
     "obsidian": true,

@@ -1,0 +1,10 @@
+filters:
+  and:
+    - file.hasProperty("category")
+    - category.containsAny(link("productivity"))
+views:
+  - type: table
+    name: Table
+    sort:
+      - property: file.ctime
+        direction: ASC

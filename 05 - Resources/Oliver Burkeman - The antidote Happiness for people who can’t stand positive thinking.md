@@ -1,0 +1,8 @@
+---
+created: 2026-02-01
+aliases:
+tags:
+  - 🌱
+category:
+  - "[[books]]"
+---

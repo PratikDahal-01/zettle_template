@@ -63,13 +63,6 @@
       "openFileInMode": "default"
     },
     {
-      "id": "7d1318ec-92bb-4054-a68b-70da6f584544",
-      "name": "Move Zettel to Private",
-      "type": "Macro",
-      "command": true,
-      "macroId": "fbbceb07-8ccb-4cad-b0a4-7374f77944d9"
-    },
-    {
       "id": "cbf9d416-bbe8-4952-b860-c545a2159dba",
       "name": "New Note",
       "type": "Template",
@@ -174,6 +167,20 @@
       "type": "Macro",
       "command": true,
       "macroId": "d182f708-cec0-496d-b79f-92aad3bdeace"
+    },
+    {
+      "id": "7fb36057-c114-4b42-bf9c-31776f2a7928",
+      "name": "Move Notes to Archive",
+      "type": "Macro",
+      "command": true,
+      "macroId": "088f2b6b-4cfc-4af5-8068-761c58450dc9"
+    },
+    {
+      "id": "bdfe09cf-5910-4816-83c5-30b69e08db9e",
+      "name": "Move Notes to Permanent",
+      "type": "Macro",
+      "command": true,
+      "macroId": "fe4c2394-c7a5-4007-8298-cc3ccb5d18fa"
     }
   ],
   "macros": [
@@ -326,12 +333,6 @@
       "runOnStartup": false
     },
     {
-      "name": "Move Zettel to Private",
-      "id": "fbbceb07-8ccb-4cad-b0a4-7374f77944d9",
-      "commands": [],
-      "runOnStartup": false
-    },
-    {
       "name": "Distraction",
       "id": "e372c893-de3a-482e-b2b4-3200a77e9d11",
       "commands": [
@@ -352,8 +353,36 @@
         {
           "name": "move-inbox-to-sleeping",
           "type": "UserScript",
-          "id": "09673190-1915-4ac3-9dc1-c93c72059e70",
+          "id": "e8590076-a8da-46e0-81af-dfffc3c8c849",
           "path": "99 - Meta/_scripts/move-inbox-to-sleeping.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Move Notes to Archive",
+      "id": "088f2b6b-4cfc-4af5-8068-761c58450dc9",
+      "commands": [
+        {
+          "name": "move-inbox-to-archive",
+          "type": "UserScript",
+          "id": "ddaa7949-bc5f-41b8-bc02-94bca11f425e",
+          "path": "99 - Meta/_scripts/move-inbox-to-archive.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Move Notes to Permanent",
+      "id": "fe4c2394-c7a5-4007-8298-cc3ccb5d18fa",
+      "commands": [
+        {
+          "name": "move-inbox-to-permanent",
+          "type": "UserScript",
+          "id": "270119f0-b820-4660-a140-a3f5eb0fd0b0",
+          "path": "99 - Meta/_scripts/move-inbox-to-permanent.js",
           "settings": {}
         }
       ],
